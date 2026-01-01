@@ -1,2 +1,3 @@
 # CloudResumeChallenge
-Implementation of https://cloudresumechallenge.dev/docs/the-challenge/azure/#2-html
+
+A dynamic resume designed, developed, and deployed to a website, showing a wide array of tools.

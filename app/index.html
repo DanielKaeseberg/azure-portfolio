@@ -3,11 +3,14 @@
 <style>
 
 body {
-  background-color: #222;
+  font-family: sans-serif;
 }
 
-h1, h2, p {
-  font-family: sans-serif;
+p {
+  margin: 0px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  padding: 0px;
 }
 
 h2 {
@@ -27,28 +30,70 @@ h2 {
 
 #page-look-width {
   width: 50.0em;
-  background-color: #DDC;
   padding: 1em;
 }
 
 #title-card {
   border-bottom: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-card-left, .title-card-right {
+  display: flex;
+  flex-direction: column;
 }
 
 #title-card-name {
   margin: 0em;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.title-card-info {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.title-card-link {
+  font-size: 14px;
 }
 
 .group-name {
   font-weight: bold;
   display: inline-block;
-  text-decoration:underline;
-  text-decoration-thickness:2px;
   margin-bottom: 0px;
+  color: #2a7fca;
 }
 
 .group-list {
   margin-top: 0px;
+}
+
+.group-box {
+  padding-top: 10px;
+}
+
+.group-box-school {
+  font-style: italic;
+}
+
+.group-box-header {
+  font-weight: bold;
+}
+
+.group-box-date {
+  color: #777;
+  font-size: 11px;
+}
+
+.group-box-desc {
+  color: #444;
+  font-size: 14px;
+}
+
+.group-box-link {
+  font-size: 12px;
 }
 
 </style>
@@ -58,46 +103,84 @@ h2 {
   <div id="page-look-main">
     <div id="page-look-width">
       <div id="title-card">
-        <h1 id="title-card-name">Daniel Kaeseberg</h1>
+        <div class="title-card-left">
+          <h1 id="title-card-name">Daniel Kaeseberg</h1>
+          <a class="title-card-link" href="https://github.com/MaybeImHere">github.com/MaybeImHere</a>
+        </div>
+        <div class="title-card-right">
+          <p class="title-card-info">309 South Vail</p>
+          <p class="title-card-info">Arlington Heights, IL 60005</p>
+          <p class="title-card-info">(224)-266-8323</p>
+          <p class="title-card-info">daniel.kaeseberg@gmail.com</p>
+        </div>
       </div>
 
       <div class="group">
         <h2 class="group-name">Education</h2>
-        <ul class="group-list">
-          <li>Associates in Engineering from Harper College, GPA 3.5 (Spring 2024)</li>
-          <li>Bachelors in Computer Science, Software Engineering Concentration (Anticipated Fall 2028)</li>
-        </ul>
+        <div class="group-box">
+          <p>
+            <span class="group-box-header">Bachelors in Computer Science</span>,
+            <span class="group-box-location">Chicago, IL</span> —
+            <span class="group-box-school">University of Chicago</span>
+          </p>
+          <p>
+            <span class="group-box-date">August 2025 - Expected Graduation: December 2027</span>
+          </p>
+          <p class="group-box-desc">
+            This included classes such as Applied Linear Algebra and Statistics, which are essential in a modern AI and data analysis heavy environment.
+          </p>
+        </div>
+        
+        <div class="group-box">
+          <p>
+            <span class="group-box-header">CompTIA Security+ Certified</span>,
+            <span class="group-box-location">Chicago, IL</span> —
+            <span class="group-box-school">Self Taught</span>
+          </p>
+          <p>
+            <span class="group-box-date">August 2024 - December 2024</span>
+          </p>
+          <p class="group-box-desc">
+            Applied network security concepts, such as identifying threat actors, threat vectors, and mitigating those threats within my cloud-based resume.
+          </p>
+        </div>
+        
+        <div class="group-box">
+          <p>
+            <span class="group-box-header">Programming Language Fluency</span> —
+            <span class="group-box-school">Self Taught</span>
+          </p>
+          <p class="group-box-desc">
+            Developed a multitude of projects across multiple languages, insuring familiarity with industry-standard programming languages and frameworks.
+            Developed multiple machine-learning models in Python, using the PyTorch framework. Had to safely deal with unsanitized data from the internet.
+            Developed a physics simulation in C#, along with using a graphics library. Had to develop skills to use an external library without relying on my previous knowledge.
+          </p>
+        </div>
+        
       </div>
       
       <div class="group">
-        <h2 class="group-name">Experience</h2>
-        <ul class="group-list">
-          <li>The very resume you are reading! This resume required knowledge of HTML/CSS for the look of the website, along with Javascript, database operations, and Azure for the visitor counter.</li>
-          <li>Wrote a transpiler for a custom language to C as a hobby project. This was written in C.</li>
-          <li>Created a electrostatic/gravitational particle simulator also as a hobby project. This was written in C#.</li>
-        </ul>
-      </div>
-      
-      <div class="group">
-        <h2 class="group-name">Honors/Certifications</h2>
-        <ul class="group-list">
-          <li>Networking+</li>
-          <li>Security+</li>
-        </ul>
-      </div>
-      
-      <div class="group">
-        <h2 class="group-name">Other Experiences/Interests</h2>
-        <ul class="group-list">
-          <li>Extensive customer service experience along with ability to independently prioritize work without the direct help of management at a grocery store.</li>
-          <li>Practiced karate for 10 years.</li>
-          <li>Enjoy reading up on latest programming/security related news.</li>
-        </ul>
+        <h2 class="group-name">Projects</h2>
+        <div class="group-box">
+          <p>
+            <span class="group-box-header">Resume Website</span>
+          </p>
+          <a class="group-box-link" href="https://github.com/MaybeImHere/CloudResumeChallenge">github.com/MaybeImHere/CloudResumeChallenge</a>
+          <p class="group-box-desc">
+            Independently designed, implemented, and deployed a website to act as a resume.
+          </p>
+          <ul class="group-box-desc">
+            <li>Used HTML/CSS/Javascript for the code.</li>
+            <li>Used Azure for deployment and hosting.</li>
+            <li>Used GitHub, along with Git to store and facilitate effective code maintenance.</li>
+            <li>Setup HTTPS, DNS, CosmosDB, Python, Testing (unit tests and recursive tests), Source Control, CI/CD (Back end), CI/CD (Front end, and documentation.</li>
+          </ul>
+        </div>
       </div>
       
       <p class="visitor-counter-text">Visitors: <span id="visitor-counter">Loading...</span></p>
   <script>
-      fetch("/api/visitorCounter", { cache: "no-store" })
+      fetch("/api/visit", { cache: "no-store" })
         .then(r => r.json())
         .then(data => {
           document.getElementById("visitor-counter").textContent = data.count;
