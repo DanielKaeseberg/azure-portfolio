@@ -1,4 +1,4 @@
-# Azure Based Website
+# Azure-based Portfolio
 
 This repository contains the source code and infrastructure configuration for my website. The project is a full-stack serverless application hosted on Microsoft Azure.
 
